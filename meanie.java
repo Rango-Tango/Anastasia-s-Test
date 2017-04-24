@@ -7,7 +7,9 @@ public abstract class meanie {
 	}//need to set weapon, set health, get location
 	
 	protected int healthM=4;
-	protected String[][] locationM=new String [8][8];
+	protected int XofM, YofM;//the x and y coordinats of the meanie
+	
+	//protected String[][] locationM=new String [8][8];
 	
 	public int getHealthM ()
 	{
@@ -18,6 +20,26 @@ public abstract class meanie {
 	{
 		this.healthM=healthM;
 	}//setting health of meanie
+	
+	public void setXM(int X)
+	{
+		XofM=X;
+	}
+	
+	public void setXM(int Y)
+	{
+		YofM=Y;
+	}
+	
+	public int getXM()
+	{
+		return XofM;
+	}
+	
+	public int getYM()
+	{
+		return YofM;
+	}
 	
 	public void hitM(String weaponP)
 	{
@@ -31,13 +53,13 @@ public abstract class meanie {
 		}
 	}
 	
-	public String[][] getLocationM ()
-	{
+	//public String[][] getLocationM ()
+	//{
 		return locationM;
-	}//returning location of meanie
+	//}//returning location of meanie
 	
-	public void setLocationM (int xM, int yM)
-	{
-		this.locationM[xM][yM]=locationM [xM][yM];
-	}//setting location of meanie
+	//public void setLocationM (int xM, int yM)
+	//{
+	//	this.locationM[xM][yM]=locationM [xM][yM];
+	//}//setting location of meanie
 }
